@@ -33,7 +33,7 @@ module.exports = function(grunt) {
         // Options for serve task
         serve: {
             options: {
-                port: 9000
+                port: 9090
             }
         },
         // Watches files for changes and runs tasks based on the changed files
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
         // The actual grunt server settings
         connect: {
             options: {
-                port: 9000,
+                port: 9090,
                 // Change this to '0.0.0.0' to access the server from outside.
                 hostname: 'localhost',
                 livereload: 35729

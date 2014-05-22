@@ -67,6 +67,54 @@ section.intro {
     color: #2B4057;
 }
 
+.main {
+    width: 60%;
+
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+
+    padding-bottom: 30px;
+
+    font-size: 1em;
+    color: #2B4057;
+}
+
+.main div[role="article"] {
+    overflow: auto;
+}
+
+.requirements {
+    margin-top: 20px;
+}
+.requirements {
+    counter-reset: section;
+}
+
+.requirements p:nth-of-type(-n+3):before {
+    counter-increment: section;
+    content: counter(section) " \2500\2500 ";
+
+    font-weight: bold;
+    font-style: italic;
+}
+
+.main div[role="article"] > *{
+    float: right;
+    width: 70%;
+}
+
+.main div[role="article"] > *:first-child {
+    float: left;
+    width: 25%;
+    margin-top: 0;
+}
+
+.main div[role="article"] p {
+    margin-top: 0;
+    padding-left: 15px;
+}
+
 #zen-summary {
 
 }
@@ -83,7 +131,7 @@ header {
     font-weight: bold;
 }
 
-header h1, header h2, .preamble h3 {
+header h1, header h2, .preamble h3, #zen-supporting h3  {
     display: inline;
     color: #3D2806;
 
@@ -93,10 +141,13 @@ header h1, header h2, .preamble h3 {
     text-transform: uppercase;
 }
 
-.preamble h3 {
+.preamble h3, #zen-supporting h3 {
     display: inline;
     font-family: Noto Serif, serif;
     font-size: 1em;
+}
+
+.preamble h3 {
     text-align: center;
 }
 
