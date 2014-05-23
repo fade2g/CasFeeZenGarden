@@ -49,9 +49,13 @@ a:hover {
     margin-left: auto;
 
     background-color: #EDE8E0;
+    background-image: url(lines.jpg);
+    background-repeat: repeat;
     border: 1px solid;
-    border-radius: 20px;
-
+    border-top-right-radius: 30px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 3px;
 }
 
 section.intro {
@@ -85,7 +89,7 @@ section.intro {
 }
 
 .requirements {
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .requirements {
     counter-reset: section;
