@@ -7,6 +7,7 @@
 
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 
+/* TODO: Chock how to provide fonts locally */
 @import url(http://fonts.googleapis.com/css?family=Noto+Serif,400:700|Noto+Sans|Playball);
 
 /* basic elements */
@@ -119,8 +120,10 @@ section.intro {
     padding-left: 15px;
 }
 
-#zen-summary {
-
+/* TODO Check visuals as font is offline */
+#zen-summary p:first-child:first-letter{
+    font: inherit;
+    font-size: 3em;
 }
 
 header {
@@ -181,6 +184,44 @@ header h1 {
 header h2 {
 }
 
+/* effective footer */
+footer {
+    position: absolute;
+    display: block;
+    left: 20%;
+    top: 30px;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    text-align: center;
+    background-size: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('tintenklecks.png');
+    border-radius: 100px;
+    margin-top: 30px;
+    box-sizing: content-box;
+
+    -webkit-transform:rotate(-15deg);
+    -o-transform:rotate(-15deg);
+    -moz-transform:rotate(-15deg);
+}
+
+footer a {
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+}
+
+footer a:first-child:before {
+    margin-top: 45px;
+}
+
+footer a:before {
+    content: " " ;
+    display: block;
+}
+
 /* Footer content */
 aside .sidebar {
     display: block;
@@ -188,7 +229,8 @@ aside .sidebar {
 }
 
 aside .sidebar div {
-    display: block;
+    position: fixed;
+    bottom: 0;
     width: 70%;
 }
 
@@ -198,7 +240,6 @@ aside .sidebar div {
     top: 0;
     vertical-align: top;
 }
-
 
 #design-selection nav, #design-archives nav, #zen-resources ul {
     display: none;
