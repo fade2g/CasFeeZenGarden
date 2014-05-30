@@ -14,7 +14,6 @@
 html {
 	margin: 0;
 	padding: 0;
-
     font-family: 'Noto Serif', serif;
 }
 
@@ -23,22 +22,32 @@ body {
     max-width: 100%;
 }
 
-h1 {
-
-}
-
 a {
     font-family: 'Noto Sans', Sans-Serif;
+    font-size: 0.85em;
     color: #051528;
     text-transform: uppercase;
-    /* text-decoration: none;
-    text-decoration-line: underline;
-    text-decoration-style: double; */
 }
 
 a:hover {
     color: #B0C1D4;
     background-color: #051528;
+}
+
+.page-wrapper:before {
+    content: "";
+    height: 9px;
+    top: -3px;
+    display: block;
+    background: url('pages_edge.png') top right no-repeat, url('seitenrand_oben.png') repeat-x 0 -5px;
+}
+
+.page-wrapper:after {
+    content: "";
+    height: 9px;
+    top: -3px;
+    display: block;
+    background: url('pages_edge_lower.png') top right no-repeat, url('seitenrand_unten.png') repeat-x 0 5px;
 }
 
 .page-wrapper {
@@ -50,12 +59,8 @@ a:hover {
     margin-left: auto;
 
     background-color: #EDE8E0;
-    background-image: url('pattern-3.png'), url('pattern-2.png'), url('pattern-1.png');
-    background-repeat: repeat;
-    border: 1px solid;
-    border-top-right-radius: 30px;
+    background: url('pages.png') repeat-y top right 0, url('paper.png') repeat;
     border-top-left-radius: 3px;
-    border-bottom-right-radius: 30px;
     border-bottom-left-radius: 3px;
 }
 
@@ -74,11 +79,9 @@ section.intro {
 
 .main {
     width: 60%;
-
     margin-top: 30px;
     margin-right: auto;
     margin-left: auto;
-
     padding-bottom: 30px;
 
     font-size: 1em;
@@ -91,7 +94,9 @@ section.intro {
 
 .requirements {
     margin-top: 50px;
+    background: url('tintenklecks_3.png') no-repeat top 10px left 20px;
 }
+
 .requirements {
     counter-reset: section;
 }
@@ -120,9 +125,15 @@ section.intro {
     padding-left: 15px;
 }
 
+#zen-summary:last-child {
+    display: inline;
+}
+
 /* TODO Check visuals as font is offline */
-#zen-summary p:first-child:first-letter{
-    font: inherit;
+#zen-summary p:first-child:first-letter {
+    float: left;
+    line-height: 60px;
+    padding-right: 10px;
     font-size: 3em;
 }
 
@@ -134,6 +145,8 @@ header {
     margin-right: auto;
     margin-left: auto;
 
+    padding-top: 100px;
+
     font-family: Noto Serif;
     font-weight: bold;
 }
@@ -142,9 +155,8 @@ header h1, header h2, .preamble h3, #zen-supporting h3  {
     display: inline;
     color: #3D2806;
 
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 700;
-    font-style: italic;
     text-transform: uppercase;
 }
 
@@ -152,6 +164,7 @@ header h1, header h2, .preamble h3, #zen-supporting h3  {
     display: inline;
     font-family: Noto Serif, serif;
     font-size: 1em;
+    font-style: italic;
 }
 
 .preamble h3 {
@@ -174,6 +187,10 @@ header h1, header h2, .preamble h3, #zen-supporting h3  {
     content: "";
 }
 
+.preamble {
+    background: url('smear.png') no-repeat top right -20px;
+}
+
 header h2:before {
     content: " \2500 ";
 }
@@ -189,22 +206,14 @@ footer {
     position: absolute;
     display: block;
     left: 20%;
-    top: 30px;
+    top: 50px;
     width: 200px;
-    height: 200px;
+    height: 300px;
     padding: 10px;
     text-align: center;
-    background-size: 150px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url('tintenklecks.png');
-    border-radius: 100px;
+    background-size: 300px;
+    background: url('tintenklecks_2.png') no-repeat center;
     margin-top: 30px;
-    box-sizing: content-box;
-
-    -webkit-transform:rotate(-15deg);
-    -o-transform:rotate(-15deg);
-    -moz-transform:rotate(-15deg);
 }
 
 footer a {
@@ -214,7 +223,7 @@ footer a {
 }
 
 footer a:first-child:before {
-    margin-top: 45px;
+    margin-top: 100px;
 }
 
 footer a:before {
@@ -223,9 +232,14 @@ footer a:before {
 }
 
 /* Footer content */
-aside .sidebar {
+aside.sidebar div.wrapper {
     display: block;
     height: auto;
+    width: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    background: url('smear_2.png') no-repeat bottom right 10%;
 }
 
 aside .sidebar div {
@@ -234,13 +248,44 @@ aside .sidebar div {
     width: 70%;
 }
 
-#design-selection, #design-archives, #zen-resources {
-    width: 30%;
-    display: inline-block;
-    top: 0;
-    vertical-align: top;
+a.design-name, a.designer-name {
+    text-transform: none;
+    text-decoration: none;
 }
 
+#design-selection, #design-archives, #zen-resources {
+    width: 27%;
+    top: 0;
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-image: url('paper.png');
+    box-shadow: 5px 5px 20px grey;
+}
+
+#design-selection h3, #design-archives h3, #zen-resources h3 {
+    padding-top: 10px;
+
+    font-family: Noto Serif;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #2B4057;
+}
+
+#design-selection ul, #design-archives ul, #zen-resources ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#design-selection ul li, #design-archives ul li, #zen-resources ul li {
+    margin-bottom: 20px;
+}
+
+/*
 #design-selection nav, #design-archives nav, #zen-resources ul {
     display: none;
 }
@@ -254,6 +299,7 @@ aside .sidebar div {
     color: #ffffcc;
     display: block;
 }
+*/
 
 /* sticky note */
 /*
