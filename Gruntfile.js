@@ -43,7 +43,7 @@ module.exports = function(grunt) {
                 tasks: ['bowerInstall']
             },*/
             styles: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
+                files: ['<%= yeoman.app %>/214/{,*/}*.css'],
                 tasks: ['newer:copy:styles', 'autoprefixer']
             },
             gruntfile: {
